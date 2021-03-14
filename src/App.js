@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React ,{useContext, useState} from 'react';
+// import Form from './componenet/form'
+// import Mouse from './componenet/mouse';
+// import Button from './componenet/Button';
+// import Reduser from './componenet/reduser';
+import Calender from './componenet/Calender/Calender';
+import FMK from './componenet/FMK';
+import Sidebar from './componenet/sidebar/Sidebar';
+import WebcamComponent from './componenet/cam';
+import Webcam from "react-webcam";
+import WebcamCapture from './componenet/cam';
+
+export const ThemeContext=React.createContext();
+export const IdContext=React.createContext();
 
 function App() {
+  const nav = ['main','menu','about us','catigoires','home','main','menu','about us','catigoires','home'];
+  // localStorage.setItem("theme", false);
+  // localStorage.setItem("name", "thaer");
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App ">
+
+     {/* <Calender/> */}
+     {/* <Sidebar  menulist={nav} text="#fff" main="gray" hover='#555' secound='#2dd' fontSize='5em'  /> */}
+      
+     {/* <FMK /> */}
+     <WebcamCapture />
+      {/* except names of title of the bar */}
     </div>
   );
 }
+
 
 export default App;
